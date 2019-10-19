@@ -17,8 +17,11 @@ import com.spring.entity.AMS;
 @Repository("amsRepository")
 public interface AMSRepository extends JpaRepository<AMS, Integer> {
 
-	//List<AMS> findByDivision(String div);
+	List<AMS> findByYear(String div);
 
+	List<AMS> findByDept(String div);
+	
+	List<AMS> findByCourse(String div);
 	
 //	List<AMS> findByArea(String area);
 	

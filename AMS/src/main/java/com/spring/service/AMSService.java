@@ -80,7 +80,7 @@ public class AMSService implements AMSServiceInterface {
 
 	@Override
 	public List<AMS> findByCourse(String div) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 

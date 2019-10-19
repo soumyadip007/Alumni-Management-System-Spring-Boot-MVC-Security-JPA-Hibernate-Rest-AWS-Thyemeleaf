@@ -15,7 +15,7 @@ import org.springframework.data.annotation.Transient;
  *
  */
 @Entity
-@Table(name = "pujo")
+@Table(name = "ams")
 public class AMS {
 
 
@@ -131,13 +131,8 @@ public class AMS {
 
 	@Override
 	public String toString() {
-		return "Pujo [id=" + id + ", name=" + name + ", division=" + division + ", area=" + area + ", location="
+		return "AMS [id=" + id + ", name=" + name + ", division=" + division + ", area=" + area + ", location="
 				+ location + ", image=" + image + ", org=" + org + ", count=" + count + "]";
 	}
 
-	
-
-
-
-	
 }

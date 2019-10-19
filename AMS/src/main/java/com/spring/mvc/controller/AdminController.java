@@ -25,52 +25,52 @@ import com.spring.service.AMSService;
 public class AdminController {
 	
 
-	private AMSService pujoService;
+	private AMSService amsService;
 	@Autowired   
 	public AdminController(AMSService obj)
 	{
-		this.pujoService=obj;
+		this.amsService=obj;
 	
 	}
 
-	@GetMapping("/add-pujo")
-	public String AddPujo(Model theModel) {
+	@GetMapping("/add-alumni")
+	public String Addalumni(Model theModel) {
 	
-		AMS pujo=new AMS();
+		AMS alumni=new AMS();
 		
-		theModel.addAttribute("pujo",pujo);
+		theModel.addAttribute("alumni",alumni);
 		
-		return "dashboard/addPujo";
+		return "dashboard/addalumni";
 	}
 	
-	@PostMapping("/add-pujo")
-	public String SavePujo(@ModelAttribute("pujo") AMS pujo) {
+	@PostMapping("/add-alumni")
+	public String Savealumni(@ModelAttribute("alumni") AMS alumni) {
 
-	//	pujo.setId(2);
-		pujoService.save(pujo);
+	//	alumni.setId(2);
+		amsService.save(alumni);
 	
-		System.out.println(pujo.getArea());
+		System.out.println(alumni.getArea());
 	
 		
-		return "redirect:/admin/add-pujo";
+		return "redirect:/admin/add-alumni";
 	}
 	
-	@GetMapping("/all-pujo")
-	public String AllPujo(Model theModel) {
+	@GetMapping("/all-alumni")
+	public String Allalumni(Model theModel) {
 
-		List<AMS> list=pujoService.findAll();
+		List<AMS> list=amsService.findAll();
 		
-		theModel.addAttribute("allpujo",list);
+		theModel.addAttribute("allalumni",list);
 		
-		return "dashboard/pujoList";
+		return "dashboard/alumniList";
 	}
 	
-	@GetMapping("/pujo-count-chart")
+	@GetMapping("/alumni-count-chart")
 	public String Chart(Model theModel) {
 
-		List<AMS> list=pujoService.findAll();
+		List<AMS> list=amsService.findAll();
 		 
-		theModel.addAttribute("allpujo",list);
+		theModel.addAttribute("allalumni",list);
 		
 		int a=0;
 		int b=0;
@@ -104,54 +104,54 @@ public class AdminController {
 	
 	
 	@GetMapping("/north-kolkata")
-	public String NorthPujo(Model theModel) {
+	public String Northalumni(Model theModel) {
 
-		List<AMS> list=pujoService.findByDivision("North");
+		List<AMS> list=amsService.findByDivision("North");
 		
-		theModel.addAttribute("allpujo",list);
+		theModel.addAttribute("allalumni",list);
 		
 		
 		
-		return "dashboard/northPujoList";
+		return "dashboard/northalumniList";
 	}
 	
 	@GetMapping("/central-kolkata")
-	public String centralPujo(Model theModel) {
+	public String centralalumni(Model theModel) {
 
-		List<AMS> list=pujoService.findByDivision("Central");
+		List<AMS> list=amsService.findByDivision("Central");
 		
-		theModel.addAttribute("allpujo",list);
+		theModel.addAttribute("allalumni",list);
 		
-		return "dashboard/centralPujoList";
+		return "dashboard/centralalumniList";
 	}
 	
 	@GetMapping("/south-kolkata")
-	public String southPujo(Model theModel) {
+	public String southalumni(Model theModel) {
 
-		List<AMS> list=pujoService.findByDivision("South");
+		List<AMS> list=amsService.findByDivision("South");
 		
-		theModel.addAttribute("allpujo",list);
+		theModel.addAttribute("allalumni",list);
 		
-		return "dashboard/southPujoList";
+		return "dashboard/southalumniList";
 	}
 	
 	
-	@GetMapping("/update-pujo")
-	public String UpdatePujo(@RequestParam("id") int theId,Model theModel) {
+	@GetMapping("/update-alumni")
+	public String Updatealumni(@RequestParam("id") int theId,Model theModel) {
 
-		AMS pujo=pujoService.findById(theId);
+		AMS alumni=amsService.findById(theId);
 		
-		theModel.addAttribute("pujo",pujo);
+		theModel.addAttribute("alumni",alumni);
 		
-		return "dashboard/addPujo";
+		return "dashboard/addalumni";
 	}
 	
-	@GetMapping("/delete-pujo")
-	public String DeletePujo(@RequestParam("id") int theId) {
+	@GetMapping("/delete-alumni")
+	public String Deletealumni(@RequestParam("id") int theId) {
 
-		pujoService.deleteById(theId);
+		amsService.deleteById(theId);
 	
-		return "redirect:/admin/all-pujo";
+		return "redirect:/admin/all-alumni";
 	}
 	
 

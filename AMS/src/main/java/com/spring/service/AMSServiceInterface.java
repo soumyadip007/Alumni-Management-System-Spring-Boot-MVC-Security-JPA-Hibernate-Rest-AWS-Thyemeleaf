@@ -15,7 +15,7 @@ public interface AMSServiceInterface {
 
 	public List<AMS> findByDivision(String div);
 	
-	public void save(AMS pujo);
+	public void save(AMS ams);
 
 	public AMS findById(int theId); 
 

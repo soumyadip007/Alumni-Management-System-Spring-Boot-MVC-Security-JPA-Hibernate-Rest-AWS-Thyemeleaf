@@ -18,75 +18,75 @@ import com.spring.entity.AMS;
 public class AMSService implements AMSServiceInterface {
 
 	
-	private AMSRepository pujoRepository;
+	private AMSRepository amsRepository;
 	
 
 	@Autowired   
 	public AMSService(AMSRepository obj)
 	{
-		pujoRepository=obj;
+		amsRepository=obj;
 	}
 	
 	
 	@Override
 	public List<AMS> findAll() {
 	
-		return pujoRepository.findAll();
+		return amsRepository.findAll();
 	}
 
 	@Override
-	public void save(AMS pujo) {
+	public void save(AMS ams) {
 		
-		pujoRepository.save(pujo);
+		amsRepository.save(ams);
 	}
 
 	@Override
 	public AMS findById(int theId) {
 		
-		Optional<AMS> result=pujoRepository.findById(theId);
+		Optional<AMS> result=amsRepository.findById(theId);
 		
-		AMS pujo=null;
+		AMS ams=null;
 		
 		if(result.isPresent())
 		{
-			pujo=result.get();
+			ams=result.get();
 		}
 		else {
-			throw new RuntimeException("Did not find Pujo id - " + theId);
+			throw new RuntimeException("Did not find ams id - " + theId);
 		}
-		return  pujo;
+		return  ams;
 	}
 
 
 	@Override
 	public void deleteById(int theId) {
-		pujoRepository.deleteById(theId);
+		amsRepository.deleteById(theId);
 	}
 
 
 	@Override
 	public List<AMS> findByDivision(String div) {
 	
-//		Optional<Pujo> result=pujoRepository.findByDivision(div);
+//		Optional<ams> result=amsRepository.findByDivision(div);
 //		
-//		List<Pujo> pujo=null;
+//		List<ams> ams=null;
 //		
 //		if(result.isPresent())
 //		{
-//			pujo.add(result.get());
+//			ams.add(result.get());
 //		}
 //		else {
-//			throw new RuntimeException("Did not find Pujo div - " + div);
+//			throw new RuntimeException("Did not find ams div - " + div);
 //		}
 		
-		return pujoRepository.findByDivision(div);
+		return amsRepository.findByDivision(div);
 	}
 
 
 	@Override
 	public List<AMS> findByArea(String area) {
 		
-		return pujoRepository.findByArea(area);
+		return amsRepository.findByArea(area);
 	}
 
 }

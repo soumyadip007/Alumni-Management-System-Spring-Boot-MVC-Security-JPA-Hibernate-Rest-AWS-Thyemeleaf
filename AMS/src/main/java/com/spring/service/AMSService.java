@@ -67,7 +67,7 @@ public class AMSService implements AMSServiceInterface {
 	@Override
 	public List<AMS> findByYear(String div) {
 		
-		return null;
+	return amsRepository.findByYear(year);
 	}
 
 

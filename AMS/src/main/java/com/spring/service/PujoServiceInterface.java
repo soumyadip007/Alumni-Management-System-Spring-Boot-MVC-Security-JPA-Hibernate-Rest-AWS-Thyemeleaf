@@ -1,7 +1,7 @@
 package com.spring.service;
 
 import java.util.List;
-import com.spring.entity.Pujo;
+import com.spring.entity.AMS;
 
 /**
  * 
@@ -11,15 +11,15 @@ import com.spring.entity.Pujo;
  */
 public interface PujoServiceInterface {
 
-	public List<Pujo> findAll();
+	public List<AMS> findAll();
 
-	public List<Pujo> findByDivision(String div);
+	public List<AMS> findByDivision(String div);
 	
-	public void save(Pujo pujo);
+	public void save(AMS pujo);
 
-	public Pujo findById(int theId); 
+	public AMS findById(int theId); 
 
 	public void deleteById(int theId);
 
-	public List<Pujo> findByArea(String area);
+	public List<AMS> findByArea(String area);
 }

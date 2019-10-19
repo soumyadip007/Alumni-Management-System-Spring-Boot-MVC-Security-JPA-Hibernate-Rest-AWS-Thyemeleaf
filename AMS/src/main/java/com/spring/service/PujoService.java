@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.spring.dao.AMSRepository;
-import com.spring.entity.Pujo;
+import com.spring.entity.AMS;
 
 /**
  * 
@@ -29,23 +29,23 @@ public class PujoService implements PujoServiceInterface {
 	
 	
 	@Override
-	public List<Pujo> findAll() {
+	public List<AMS> findAll() {
 	
 		return pujoRepository.findAll();
 	}
 
 	@Override
-	public void save(Pujo pujo) {
+	public void save(AMS pujo) {
 		
 		pujoRepository.save(pujo);
 	}
 
 	@Override
-	public Pujo findById(int theId) {
+	public AMS findById(int theId) {
 		
-		Optional<Pujo> result=pujoRepository.findById(theId);
+		Optional<AMS> result=pujoRepository.findById(theId);
 		
-		Pujo pujo=null;
+		AMS pujo=null;
 		
 		if(result.isPresent())
 		{
@@ -65,7 +65,7 @@ public class PujoService implements PujoServiceInterface {
 
 
 	@Override
-	public List<Pujo> findByDivision(String div) {
+	public List<AMS> findByDivision(String div) {
 	
 //		Optional<Pujo> result=pujoRepository.findByDivision(div);
 //		
@@ -84,7 +84,7 @@ public class PujoService implements PujoServiceInterface {
 
 
 	@Override
-	public List<Pujo> findByArea(String area) {
+	public List<AMS> findByArea(String area) {
 		
 		return pujoRepository.findByArea(area);
 	}

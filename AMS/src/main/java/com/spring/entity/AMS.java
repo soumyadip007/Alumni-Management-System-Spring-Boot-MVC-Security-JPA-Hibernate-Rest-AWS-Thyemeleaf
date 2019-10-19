@@ -16,7 +16,7 @@ import org.springframework.data.annotation.Transient;
  */
 @Entity
 @Table(name = "pujo")
-public class Pujo {
+public class AMS {
 
 
 	@Id

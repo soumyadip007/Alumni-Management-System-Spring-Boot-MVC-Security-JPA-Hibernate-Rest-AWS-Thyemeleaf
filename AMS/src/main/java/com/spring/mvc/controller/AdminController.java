@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.spring.entity.Pujo;
+import com.spring.entity.AMS;
 import com.spring.service.PujoService;
 /**
  * 
@@ -36,7 +36,7 @@ public class AdminController {
 	@GetMapping("/add-pujo")
 	public String AddPujo(Model theModel) {
 	
-		Pujo pujo=new Pujo();
+		AMS pujo=new AMS();
 		
 		theModel.addAttribute("pujo",pujo);
 		
@@ -44,7 +44,7 @@ public class AdminController {
 	}
 	
 	@PostMapping("/add-pujo")
-	public String SavePujo(@ModelAttribute("pujo") Pujo pujo) {
+	public String SavePujo(@ModelAttribute("pujo") AMS pujo) {
 
 	//	pujo.setId(2);
 		pujoService.save(pujo);
@@ -58,7 +58,7 @@ public class AdminController {
 	@GetMapping("/all-pujo")
 	public String AllPujo(Model theModel) {
 
-		List<Pujo> list=pujoService.findAll();
+		List<AMS> list=pujoService.findAll();
 		
 		theModel.addAttribute("allpujo",list);
 		
@@ -68,7 +68,7 @@ public class AdminController {
 	@GetMapping("/pujo-count-chart")
 	public String Chart(Model theModel) {
 
-		List<Pujo> list=pujoService.findAll();
+		List<AMS> list=pujoService.findAll();
 		 
 		theModel.addAttribute("allpujo",list);
 		
@@ -76,7 +76,7 @@ public class AdminController {
 		int b=0;
 		int c=0;
 		
-		for(Pujo obj:list)
+		for(AMS obj:list)
 		{
 			if(obj.getDivision().equals("North"))
 			{
@@ -106,7 +106,7 @@ public class AdminController {
 	@GetMapping("/north-kolkata")
 	public String NorthPujo(Model theModel) {
 
-		List<Pujo> list=pujoService.findByDivision("North");
+		List<AMS> list=pujoService.findByDivision("North");
 		
 		theModel.addAttribute("allpujo",list);
 		
@@ -118,7 +118,7 @@ public class AdminController {
 	@GetMapping("/central-kolkata")
 	public String centralPujo(Model theModel) {
 
-		List<Pujo> list=pujoService.findByDivision("Central");
+		List<AMS> list=pujoService.findByDivision("Central");
 		
 		theModel.addAttribute("allpujo",list);
 		
@@ -128,7 +128,7 @@ public class AdminController {
 	@GetMapping("/south-kolkata")
 	public String southPujo(Model theModel) {
 
-		List<Pujo> list=pujoService.findByDivision("South");
+		List<AMS> list=pujoService.findByDivision("South");
 		
 		theModel.addAttribute("allpujo",list);
 		
@@ -139,7 +139,7 @@ public class AdminController {
 	@GetMapping("/update-pujo")
 	public String UpdatePujo(@RequestParam("id") int theId,Model theModel) {
 
-		Pujo pujo=pujoService.findById(theId);
+		AMS pujo=pujoService.findById(theId);
 		
 		theModel.addAttribute("pujo",pujo);
 		

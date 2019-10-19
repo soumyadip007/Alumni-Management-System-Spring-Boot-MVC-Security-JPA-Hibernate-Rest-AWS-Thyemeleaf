@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.spring.entity.Pujo;
+import com.spring.entity.AMS;
 
 /**
  * 
@@ -15,12 +15,12 @@ import com.spring.entity.Pujo;
  *
  */
 @Repository("pujoRepository")
-public interface AMSRepository extends JpaRepository<Pujo, Integer> {
+public interface AMSRepository extends JpaRepository<AMS, Integer> {
 
-	List<Pujo> findByDivision(String div);
+	List<AMS> findByDivision(String div);
 
 	
-	List<Pujo> findByArea(String area);
+	List<AMS> findByArea(String area);
 	
 	//@Query(value="select distinct division from pujo")
 	//List<Pujo>  findDistinctById(String id);

@@ -49,7 +49,7 @@ public class AdminController {
 	//	alumni.setId(2);
 		amsService.save(alumni);
 	
-		System.out.println(alumni.getArea());
+	//	System.out.println(alumni.getArea());
 	
 		
 		return "redirect:/admin/add-alumni";
@@ -64,77 +64,7 @@ public class AdminController {
 		
 		return "dashboard/alumniList";
 	}
-	
-	@GetMapping("/alumni-count-chart")
-	public String Chart(Model theModel) {
 
-		List<AMS> list=amsService.findAll();
-		 
-		theModel.addAttribute("allalumni",list);
-		
-		int a=0;
-		int b=0;
-		int c=0;
-		
-		for(AMS obj:list)
-		{
-			if(obj.getDivision().equals("North"))
-			{
-				a+=obj.getCount();
-			}
-			else if(obj.getDivision().equals("South"))
-			{
-				b+=obj.getCount();
-			}
-			else if(obj.getDivision().equals("Central"))
-			{
-				c+=obj.getCount();
-			}
-			
-		}
-		theModel.addAttribute("a",a);
-		
-		theModel.addAttribute("b",b);
-		
-		theModel.addAttribute("c",c);
-		
-		System.out.println("a="+a+"b="+b+"c="+c);
-		return "dashboard/chart";
-	}
-	
-	
-	@GetMapping("/north-kolkata")
-	public String Northalumni(Model theModel) {
-
-		List<AMS> list=amsService.findByDivision("North");
-		
-		theModel.addAttribute("allalumni",list);
-		
-		
-		
-		return "dashboard/northalumniList";
-	}
-	
-	@GetMapping("/central-kolkata")
-	public String centralalumni(Model theModel) {
-
-		List<AMS> list=amsService.findByDivision("Central");
-		
-		theModel.addAttribute("allalumni",list);
-		
-		return "dashboard/centralalumniList";
-	}
-	
-	@GetMapping("/south-kolkata")
-	public String southalumni(Model theModel) {
-
-		List<AMS> list=amsService.findByDivision("South");
-		
-		theModel.addAttribute("allalumni",list);
-		
-		return "dashboard/southalumniList";
-	}
-	
 	
 	@GetMapping("/update-alumni")
 	public String Updatealumni(@RequestParam("id") int theId,Model theModel) {
@@ -153,7 +83,94 @@ public class AdminController {
 	
 		return "redirect:/admin/all-alumni";
 	}
-	
 
 	
 }
+
+
+//
+//
+//@GetMapping("/alumni-count-chart")
+//public String Chart(Model theModel) {
+//
+//	List<AMS> list=amsService.findAll();
+//	 
+//	theModel.addAttribute("allalumni",list);
+//	
+//	int a=0;
+//	int b=0;
+//	int c=0;
+//	
+//	for(AMS obj:list)
+//	{
+//		if(obj.getDivision().equals("North"))
+//		{
+//			a+=obj.getCount();
+//		}
+//		else if(obj.getDivision().equals("South"))
+//		{
+//			b+=obj.getCount();
+//		}
+//		else if(obj.getDivision().equals("Central"))
+//		{
+//			c+=obj.getCount();
+//		}
+//		
+//	}
+//	theModel.addAttribute("a",a);
+//	
+//	theModel.addAttribute("b",b);
+//	
+//	theModel.addAttribute("c",c);
+//	
+//	System.out.println("a="+a+"b="+b+"c="+c);
+//	return "dashboard/chart";
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//
+//@GetMapping("/alumni/2017")
+//public String Northalumni(Model theModel) {
+//
+//	List<AMS> list=amsService.findByDivision("North");
+//	
+//	theModel.addAttribute("allalumni",list);
+//	
+//	
+//	
+//	return "dashboard/northalumniList";
+//}
+//
+//@GetMapping("/alumni/2018")
+//public String centralalumni(Model theModel) {
+//
+//	List<AMS> list=amsService.findByDivision("Central");
+//	
+//	theModel.addAttribute("allalumni",list);
+//	
+//	return "dashboard/centralalumniList";
+//}
+//
+//@GetMapping("/south-kolkata")
+//public String southalumni(Model theModel) {
+//
+//	List<AMS> list=amsService.findByDivision("South");
+//	
+//	theModel.addAttribute("allalumni",list);
+//	
+//	return "dashboard/southalumniList";
+//}
+

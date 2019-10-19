@@ -23,6 +23,9 @@ public class AMS {
 	@Column(name = "id")
 	private int id;
 	
+	@Column(name = "name")
+	private String name;
+	
 	@Column(name = "year")
 	private String year;
 	
@@ -170,6 +173,17 @@ public class AMS {
 
 	public String getAchivements() {
 		return achivements;
+	}
+
+	
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 

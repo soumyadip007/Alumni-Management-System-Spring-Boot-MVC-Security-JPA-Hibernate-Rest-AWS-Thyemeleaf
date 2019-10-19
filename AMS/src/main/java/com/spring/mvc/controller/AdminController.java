@@ -40,7 +40,7 @@ public class AdminController {
 		
 		theModel.addAttribute("alumni",alumni);
 		
-		return "dashboard/addalumni";
+		return "dashboard/addAlumni";
 	}
 	
 	@PostMapping("/add-alumni")

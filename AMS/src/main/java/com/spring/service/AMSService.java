@@ -74,7 +74,7 @@ public class AMSService implements AMSServiceInterface {
 	@Override
 	public List<AMS> findByDept(String div) {
 		
-		return null;
+		return amsRepository.findByDept(dept);
 	}
 
 

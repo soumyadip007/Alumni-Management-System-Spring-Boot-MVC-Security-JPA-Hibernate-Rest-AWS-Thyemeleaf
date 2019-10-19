@@ -121,26 +121,28 @@
 	<td><br><input type="text"  th:field="*{name}"   class="form-control" required="" placeholder="alumni Name"></td>
 	</tr>
 	<input type="hidden"  th:field="*{id}" th:value="*{id}"  class="form-control" required="" >
+	<input type="hidden"  th:field="*{click}" th:value="*{click}"  class="form-control" required="" >
+	
 		<tr>
 	
-	<td><br><dt class="col-sm-3">Year</dt></td>
+	<td><br><dt class="col-sm-3">Year:</dt></td>
 	<td><br><input type="text"  th:field="*{year}" class="form-control" required="" 
 	placeholder="Year of passing"></td>
 	</tr>
 	
 		<tr>
-	<td><br><dt class="col-sm-3">Course</dt></td>
+	<td><br><dt class="col-sm-3">Course:</dt></td>
 	<td><br><input type="text"  th:field="*{course}" class="form-control" 
 	required="" placeholder="Course"></td>
 	</tr>
 			<tr>
-	<td><br><dt class="col-sm-3">Dept. </dt></td>
+	<td><br><dt class="col-sm-3">Dept.: </dt></td>
 	<td><br><input type="text"  th:field="*{dept}"  class="form-control" 
 	required="" placeholder="Department"></td>
 	</tr>
 	
 		<tr>
-	<td><br><dt class="col-sm-3">Enrollment ID </dt></td>
+	<td><br><dt class="col-sm-3">Enrollment ID: </dt></td>
 	<td><br><input type="text"  th:field="*{enrl}"  class="form-control" 
 	required="" placeholder="Enrollment ID:"></td>
 	</tr>
@@ -148,18 +150,18 @@
 	
 	
 		<tr>
-	<td><br><dt class="col-sm-3">DGPA </dt></td>
+	<td><br><dt class="col-sm-3">DGPA: </dt></td>
 	<td><br><input type="text"  th:field="*{dgpa}" 
 	class="form-control" required="" placeholder="DGPA"></td>
 	</tr>
 			<tr>
-	<td><br><dt class="col-sm-3">Email Id</dt></td>
+	<td><br><dt class="col-sm-3">Email Id:</dt></td>
 	<td><br><input type="email"  th:field="*{email}" 
 	 class="form-control" required="" placeholder="Email Id"></td>
 	</tr>
 	
 	<tr>
-	<td><br><dt class="col-sm-3">Address</dt></td>
+	<td><br><dt class="col-sm-3">Address:</dt></td>
 	<td><br><textarea th:field="*{address}" rows="2"
 	 cols="150" name="mess" class="form-control" id="email"  
 	 required="" placeholder="Address"></textarea><br></td>
@@ -167,19 +169,24 @@
 	
 	
 		<tr>
-	<td><br><dt class="col-sm-3">Contact No.</dt></td>
+	<td><br><dt class="col-sm-3">Contact No.:</dt></td>
 	<td><br><input type="number"  th:field="*{ph}" 
 	 class="form-control" required="" placeholder="Contact No."></td>
 	</tr>
 	
 	<tr>
-	<td><br><dt class="col-sm-3">Placed</dt></td>
+	<td><br><dt class="col-sm-3">Placed:</dt></td>
 	<td><br><input type="text"  th:field="*{placed}" 
 	 class="form-control" required="" placeholder="Placed"></td>
 	</tr>
 	
+	<tr>
+	<td><br><dt class="col-sm-3">Chapter:</dt></td>
+	<td><br><input type="text"  th:field="*{chapter}" 
+	 class="form-control" required="" placeholder="Member of any Chapter"></td>
+	</tr>
 		<tr>
-	<td><br><dt class="col-sm-3">Image</dt></td>
+	<td><br><dt class="col-sm-3">Image:</dt></td>
 	<td><br><input type="text"  th:field="*{image}" 
 	 class="form-control" required="" placeholder="Image"></td>
 	</tr>
@@ -187,7 +194,7 @@
 	
 	
 	<tr>
-	<td><br><dt class="col-sm-3">Achivements</dt></td>
+	<td><br><dt class="col-sm-3">Achivements:</dt></td>
 	<td><br><textarea th:field="*{achivements}" rows="10" 
 	cols="150" name="mess" class="form-control" id="email" 
 	 required="" placeholder="Achivementsl"></textarea><br></td>

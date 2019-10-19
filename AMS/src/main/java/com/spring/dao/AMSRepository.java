@@ -15,7 +15,7 @@ import com.spring.entity.Pujo;
  *
  */
 @Repository("pujoRepository")
-public interface PujoRepository extends JpaRepository<Pujo, Integer> {
+public interface AMSRepository extends JpaRepository<Pujo, Integer> {
 
 	List<Pujo> findByDivision(String div);
 

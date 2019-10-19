@@ -90,7 +90,7 @@ public class AdminController {
 		
 		theModel.addAttribute("allalumni",list);
 		
-		return "dashboard/alumniList";
+		return "dashboard/2019";
 	}
 	
 	@GetMapping("/2020")
@@ -100,7 +100,7 @@ public class AdminController {
 		
 		theModel.addAttribute("allalumni",list);
 		
-		return "dashboard/alumniList";
+		return "dashboard/2020";
 	}
 	
 	
@@ -111,7 +111,7 @@ public class AdminController {
 		
 		theModel.addAttribute("allalumni",list);
 		
-		return "dashboard/alumniList";
+		return "dashboard/2021";
 	}
 }
 

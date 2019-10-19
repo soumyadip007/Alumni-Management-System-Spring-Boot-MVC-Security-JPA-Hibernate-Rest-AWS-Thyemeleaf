@@ -65,21 +65,21 @@ public class AMSService implements AMSServiceInterface {
 
 
 	@Override
-	public List<AMS> findByYear(String div) {
+	public List<AMS> findByYear(String year) {
 		
 	return amsRepository.findByYear(year);
 	}
 
 
 	@Override
-	public List<AMS> findByDept(String div) {
+	public List<AMS> findByDept(String dept) {
 		
 		return amsRepository.findByDept(dept);
 	}
 
 
 	@Override
-	public List<AMS> findByCourse(String div) {
+	public List<AMS> findByCourse(String course) {
 		
 		return amsRepository.findByCourse(course);
 	}

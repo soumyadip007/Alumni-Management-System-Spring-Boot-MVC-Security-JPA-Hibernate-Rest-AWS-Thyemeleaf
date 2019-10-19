@@ -66,7 +66,7 @@ public class AMSService implements AMSServiceInterface {
 
 	@Override
 	public List<AMS> findByYear(String div) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 

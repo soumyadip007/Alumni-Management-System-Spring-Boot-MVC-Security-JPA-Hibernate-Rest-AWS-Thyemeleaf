@@ -81,15 +81,7 @@ public class AdminController {
 		return "redirect:/admin/all-alumni";
 	}
 
-	@GetMapping("/2018")
-	public String year2018(Model theModel) {
 
-		List<AMS> list=amsService.findByYear("2018");
-		
-		theModel.addAttribute("allalumni",list);
-		
-		return "dashboard/alumniList";
-	}
 	
 	@GetMapping("/2019")
 	public String year2019(Model theModel) {
@@ -111,6 +103,16 @@ public class AdminController {
 		return "dashboard/alumniList";
 	}
 	
+	
+	@GetMapping("/2021")
+	public String year2018(Model theModel) {
+
+		List<AMS> list=amsService.findByYear("2021");
+		
+		theModel.addAttribute("allalumni",list);
+		
+		return "dashboard/alumniList";
+	}
 }
 
 

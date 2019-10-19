@@ -46,12 +46,9 @@ public class AdminController {
 	@PostMapping("/add-alumni")
 	public String Savealumni(@ModelAttribute("alumni") AMS alumni) {
 
-	//	alumni.setId(2);
+	
 		amsService.save(alumni);
 	
-	//	System.out.println(alumni.getArea());
-	
-		
 		return "redirect:/admin/add-alumni";
 	}
 	
@@ -84,6 +81,15 @@ public class AdminController {
 		return "redirect:/admin/all-alumni";
 	}
 
+	@GetMapping("/2018")
+	public String year2018(Model theModel) {
+
+		List<AMS> list=amsService.findByYear("2019");
+		
+		theModel.addAttribute("allalumni",list);
+		
+		return "dashboard/alumniList";
+	}
 	
 }
 

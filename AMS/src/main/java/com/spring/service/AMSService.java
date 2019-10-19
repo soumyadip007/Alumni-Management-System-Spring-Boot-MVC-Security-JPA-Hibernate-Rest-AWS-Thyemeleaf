@@ -73,7 +73,7 @@ public class AMSService implements AMSServiceInterface {
 
 	@Override
 	public List<AMS> findByDept(String div) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 

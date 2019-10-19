@@ -78,6 +78,18 @@ public class UserController {
 		
 		return "dashboard/2021";
 	}
+	
+
+//	@GetMapping("/id")
+//	public String getById(@RequestParam("id") int theId,Model theModel) {
+//
+//		String enrl= String.valueOf(theId);
+//		List<AMS> list=amsService.findById(enrl);
+//		
+//		theModel.addAttribute("allalumni",list);
+//		
+//		return "dashboard/2021";
+//	}
 }
 
 

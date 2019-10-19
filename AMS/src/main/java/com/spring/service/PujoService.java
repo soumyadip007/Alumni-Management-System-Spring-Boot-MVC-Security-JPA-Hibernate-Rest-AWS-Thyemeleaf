@@ -5,7 +5,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.spring.dao.PujoRepository;
+import com.spring.dao.AMSRepository;
 import com.spring.entity.Pujo;
 
 /**
@@ -18,11 +18,11 @@ import com.spring.entity.Pujo;
 public class PujoService implements PujoServiceInterface {
 
 	
-	private PujoRepository pujoRepository;
+	private AMSRepository pujoRepository;
 	
 
 	@Autowired   
-	public PujoService(PujoRepository obj)
+	public PujoService(AMSRepository obj)
 	{
 		pujoRepository=obj;
 	}

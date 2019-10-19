@@ -63,6 +63,27 @@ public class AMSService implements AMSServiceInterface {
 		amsRepository.deleteById(theId);
 	}
 
+
+	@Override
+	public List<AMS> findByYear(String div) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public List<AMS> findByDept(String div) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public List<AMS> findByCourse(String div) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 //
 //	@Override
 //	public List<AMS> findByDivision(String div) {

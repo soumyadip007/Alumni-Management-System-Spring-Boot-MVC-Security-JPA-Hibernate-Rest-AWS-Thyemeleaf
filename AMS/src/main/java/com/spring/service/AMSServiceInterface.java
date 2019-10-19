@@ -9,7 +9,7 @@ import com.spring.entity.AMS;
  * @github soumyadip007
  *
  */
-public interface PujoServiceInterface {
+public interface AMSServiceInterface {
 
 	public List<AMS> findAll();
 

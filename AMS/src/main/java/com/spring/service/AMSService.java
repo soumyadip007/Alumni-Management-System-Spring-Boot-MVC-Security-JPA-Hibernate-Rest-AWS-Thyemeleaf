@@ -15,14 +15,14 @@ import com.spring.entity.AMS;
  *
  */
 @Service
-public class PujoService implements PujoServiceInterface {
+public class AMSService implements AMSServiceInterface {
 
 	
 	private AMSRepository pujoRepository;
 	
 
 	@Autowired   
-	public PujoService(AMSRepository obj)
+	public AMSService(AMSRepository obj)
 	{
 		pujoRepository=obj;
 	}

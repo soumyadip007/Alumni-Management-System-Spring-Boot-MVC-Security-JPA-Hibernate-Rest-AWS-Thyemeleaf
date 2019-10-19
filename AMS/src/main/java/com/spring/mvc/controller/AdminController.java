@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.spring.entity.AMS;
-import com.spring.service.PujoService;
+import com.spring.service.AMSService;
 /**
  * 
  * @author Soumyadip Chowdhury
@@ -25,9 +25,9 @@ import com.spring.service.PujoService;
 public class AdminController {
 	
 
-	private PujoService pujoService;
+	private AMSService pujoService;
 	@Autowired   
-	public AdminController(PujoService obj)
+	public AdminController(AMSService obj)
 	{
 		this.pujoService=obj;
 	

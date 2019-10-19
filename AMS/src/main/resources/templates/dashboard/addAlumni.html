@@ -33,7 +33,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1"  th:href="@{/admin/doctor-details}">alumni Direction</a>
+      <a class="navbar-brand mr-1"  th:href="@{/admin/doctor-details}">Alumni System</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -124,60 +124,73 @@
 		<tr>
 	
 	<td><br><dt class="col-sm-3">Year</dt></td>
-	<td><br><input type="text"  th:field="*{year}" class="form-control" required="" placeholder="Organization Name"></td>
+	<td><br><input type="text"  th:field="*{year}" class="form-control" required="" 
+	placeholder="Year of passing"></td>
 	</tr>
 	
 		<tr>
-	<td><br><dt class="col-sm-3">Course Division </dt></td>
-	<td><br><input type="text"  th:field="*{course}" class="form-control" required="" placeholder="Kolkata Division"></td>
+	<td><br><dt class="col-sm-3">Course</dt></td>
+	<td><br><input type="text"  th:field="*{course}" class="form-control" 
+	required="" placeholder="Course"></td>
 	</tr>
 			<tr>
 	<td><br><dt class="col-sm-3">Dept. </dt></td>
-	<td><br><input type="text"  th:field="*{dept}"  class="form-control" required="" placeholder="Kolkata Area"></td>
+	<td><br><input type="text"  th:field="*{dept}"  class="form-control" 
+	required="" placeholder="Department"></td>
 	</tr>
 	
-	
-	<tr>
-	<td><br><dt class="col-sm-3">Enrollment ID</dt></td>
-	<td><br><textarea th:field="*{enrl}" rows="1" cols="150" name="mess" class="form-control" id="email"  required="" placeholder="Image Url"></textarea><br></td>
+		<tr>
+	<td><br><dt class="col-sm-3">Enrollment ID </dt></td>
+	<td><br><input type="text"  th:field="*{enrl}"  class="form-control" 
+	required="" placeholder="Enrollment ID:"></td>
 	</tr>
+	
 	
 	
 		<tr>
 	<td><br><dt class="col-sm-3">DGPA </dt></td>
-	<td><br><input type="text"  th:field="*{dgpa}" class="form-control" required="" placeholder="Kolkata Division"></td>
+	<td><br><input type="text"  th:field="*{dgpa}" 
+	class="form-control" required="" placeholder="DGPA"></td>
 	</tr>
 			<tr>
 	<td><br><dt class="col-sm-3">Email Id</dt></td>
-	<td><br><input type="text"  th:field="*{email}"  class="form-control" required="" placeholder="Kolkata Area"></td>
+	<td><br><input type="email"  th:field="*{email}" 
+	 class="form-control" required="" placeholder="Email Id"></td>
 	</tr>
 	
 	<tr>
 	<td><br><dt class="col-sm-3">Address</dt></td>
-	<td><br><textarea th:field="*{address}" rows="2" cols="150" name="mess" class="form-control" id="email"  required="" placeholder="Image Url"></textarea><br></td>
+	<td><br><textarea th:field="*{address}" rows="2"
+	 cols="150" name="mess" class="form-control" id="email"  
+	 required="" placeholder="Address"></textarea><br></td>
 	</tr>
 	
 	
 		<tr>
 	<td><br><dt class="col-sm-3">Contact No.</dt></td>
-	<td><br><input type="text"  th:field="*{ph}"  class="form-control" required="" placeholder="Location"></td>
+	<td><br><input type="number"  th:field="*{ph}" 
+	 class="form-control" required="" placeholder="Contact No."></td>
 	</tr>
 	
 	<tr>
 	<td><br><dt class="col-sm-3">Placed</dt></td>
-	<td><br><input type="text"  th:field="*{placed}"  class="form-control" required="" placeholder="Location"></td>
+	<td><br><input type="text"  th:field="*{placed}" 
+	 class="form-control" required="" placeholder="Placed"></td>
 	</tr>
 	
 		<tr>
 	<td><br><dt class="col-sm-3">Image</dt></td>
-	<td><br><input type="text"  th:field="*{image}"  class="form-control" required="" placeholder="Location"></td>
+	<td><br><input type="text"  th:field="*{image}" 
+	 class="form-control" required="" placeholder="Image"></td>
 	</tr>
 	
 	
 	
 	<tr>
 	<td><br><dt class="col-sm-3">Achivements</dt></td>
-	<td><br><textarea th:field="*{achivements}" rows="10" cols="150" name="mess" class="form-control" id="email"  required="" placeholder="Image Url"></textarea><br></td>
+	<td><br><textarea th:field="*{achivements}" rows="10" 
+	cols="150" name="mess" class="form-control" id="email" 
+	 required="" placeholder="Achivementsl"></textarea><br></td>
 	</tr>
 	
 <br><br>

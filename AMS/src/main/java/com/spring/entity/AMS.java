@@ -15,38 +15,57 @@ import org.springframework.data.annotation.Transient;
  *
  */
 @Entity
-@Table(name = "pujo")
+@Table(name = "ams")
 public class AMS {
-
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private int id;
 	
-	@Column(name = "name")
-	private String name;
+	@Column(name = "year")
+	private String year;
 	
-	@Column(name = "division")
-	private String division;
+	@Column(name = "course")
+	private String course;
 	
-	@Column(name = "area")
-	private String area;
+	@Column(name = "dept")
+	private String dept;
 	
-	@Column(name = "location")
-	private String location;
+	@Column(name = "enrl")
+	private String enrl;
+	
+	@Column(name = "dgpa")
+	private String dgpa;
+	
+
+	@Column(name = "chapter")
+	private String chapter;
+	
+	
+	@Column(name = "email")
+	private String email;
+	
+	@Column(name = "address")
+	private String address;
+	
+	@Column(name = "ph")
+	private String ph;
+	
+
+	@Column(name = "achivements")
+	private String achivements;
+	
+	@Column(name = "placed")
+	private String placed;
 	
 	@Column(name = "image")
 	private String image;
 	
 
-	@Column(name = "org")
-	private String org;
-	
-	
-	@Column(name = "count")
+	@Column(name = "click")
 	@Transient
-	private int count;
+	private int click;
 
 
 	public int getId() {
@@ -59,43 +78,113 @@ public class AMS {
 	}
 
 
-	public String getName() {
-		return name;
+	public String getYear() {
+		return year;
 	}
 
 
-	public void setName(String name) {
-		this.name = name;
+	public void setYear(String year) {
+		this.year = year;
 	}
 
 
-	public String getDivision() {
-		return division;
+	public String getCourse() {
+		return course;
 	}
 
 
-	public void setDivision(String division) {
-		this.division = division;
+	public void setCourse(String course) {
+		this.course = course;
 	}
 
 
-	public String getArea() {
-		return area;
+	public String getDept() {
+		return dept;
 	}
 
 
-	public void setArea(String area) {
-		this.area = area;
+	public void setDept(String dept) {
+		this.dept = dept;
 	}
 
 
-	public String getLocation() {
-		return location;
+	public String getEnrl() {
+		return enrl;
 	}
 
 
-	public void setLocation(String location) {
-		this.location = location;
+	public void setEnrl(String enrl) {
+		this.enrl = enrl;
+	}
+
+
+	public String getDgpa() {
+		return dgpa;
+	}
+
+
+	public void setDgpa(String dgpa) {
+		this.dgpa = dgpa;
+	}
+
+
+	public String getChapter() {
+		return chapter;
+	}
+
+
+	public void setChapter(String chapter) {
+		this.chapter = chapter;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public String getAddress() {
+		return address;
+	}
+
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+
+	public String getPh() {
+		return ph;
+	}
+
+
+	public void setPh(String ph) {
+		this.ph = ph;
+	}
+
+
+	public String getAchivements() {
+		return achivements;
+	}
+
+
+	public void setAchivements(String achivements) {
+		this.achivements = achivements;
+	}
+
+
+	public String getPlaced() {
+		return placed;
+	}
+
+
+	public void setPlaced(String placed) {
+		this.placed = placed;
 	}
 
 
@@ -109,30 +198,25 @@ public class AMS {
 	}
 
 
-	public String getOrg() {
-		return org;
+	public int getClick() {
+		return click;
 	}
 
 
-	public void setOrg(String org) {
-		this.org = org;
-	}
-
-
-	public int getCount() {
-		return count;
-	}
-
-
-	public void setCount(int count) {
-		this.count = count;
+	public void setClick(int click) {
+		this.click = click;
 	}
 
 
 	@Override
 	public String toString() {
-		return "AMS [id=" + id + ", name=" + name + ", division=" + division + ", area=" + area + ", location="
-				+ location + ", image=" + image + ", org=" + org + ", count=" + count + "]";
+		return "AMS [id=" + id + ", year=" + year + ", course=" + course + ", dept=" + dept + ", enrl=" + enrl
+				+ ", dgpa=" + dgpa + ", chapter=" + chapter + ", email=" + email + ", address=" + address + ", ph=" + ph
+				+ ", achivements=" + achivements + ", placed=" + placed + ", image=" + image + ", click=" + click + "]";
 	}
+
+	
+
+
 
 }

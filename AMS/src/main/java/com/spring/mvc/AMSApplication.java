@@ -19,15 +19,15 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @ComponentScan({"com.spring.*"})
 @EntityScan("com.spring.*")
 @EnableJpaRepositories("com.spring.*")
-public class PujoApplication  extends SpringBootServletInitializer {
+public class AMSApplication  extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
-        SpringApplication.run(PujoApplication.class, args);
+        SpringApplication.run(AMSApplication.class, args);
     }
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(PujoApplication.class);
+        return builder.sources(AMSApplication.class);
     }
 }
 

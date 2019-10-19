@@ -18,5 +18,11 @@ public interface AMSServiceInterface {
 	public AMS findById(int theId); 
 
 	public void deleteById(int theId);
+	
+	public List<AMS> findByYear(String div);
+
+	public List<AMS> findByDept(String div);
+	
+	public List<AMS> findByCourse(String div);
 
 }

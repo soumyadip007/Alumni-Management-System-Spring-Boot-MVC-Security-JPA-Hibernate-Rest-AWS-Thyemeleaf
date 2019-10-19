@@ -13,13 +13,10 @@ public interface AMSServiceInterface {
 
 	public List<AMS> findAll();
 
-	public List<AMS> findByDivision(String div);
-	
 	public void save(AMS ams);
 
 	public AMS findById(int theId); 
 
 	public void deleteById(int theId);
 
-	public List<AMS> findByArea(String area);
 }

@@ -14,13 +14,13 @@ import com.spring.entity.AMS;
  * @github soumyadip007
  *
  */
-@Repository("pujoRepository")
+@Repository("amsRepository")
 public interface AMSRepository extends JpaRepository<AMS, Integer> {
 
-	List<AMS> findByDivision(String div);
+	//List<AMS> findByDivision(String div);
 
 	
-	List<AMS> findByArea(String area);
+//	List<AMS> findByArea(String area);
 	
 	//@Query(value="select distinct division from pujo")
 	//List<Pujo>  findDistinctById(String id);

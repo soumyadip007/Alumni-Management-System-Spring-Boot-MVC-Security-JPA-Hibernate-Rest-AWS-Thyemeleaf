@@ -63,30 +63,30 @@ public class AMSService implements AMSServiceInterface {
 		amsRepository.deleteById(theId);
 	}
 
-
-	@Override
-	public List<AMS> findByDivision(String div) {
-	
-//		Optional<ams> result=amsRepository.findByDivision(div);
+//
+//	@Override
+//	public List<AMS> findByDivision(String div) {
+//	
+////		Optional<ams> result=amsRepository.findByDivision(div);
+////		
+////		List<ams> ams=null;
+////		
+////		if(result.isPresent())
+////		{
+////			ams.add(result.get());
+////		}
+////		else {
+////			throw new RuntimeException("Did not find ams div - " + div);
+////		}
 //		
-//		List<ams> ams=null;
+//		return amsRepository.findByDivision(div);
+//	}
+//
+//
+//	@Override
+//	public List<AMS> findByArea(String area) {
 //		
-//		if(result.isPresent())
-//		{
-//			ams.add(result.get());
-//		}
-//		else {
-//			throw new RuntimeException("Did not find ams div - " + div);
-//		}
-		
-		return amsRepository.findByDivision(div);
-	}
-
-
-	@Override
-	public List<AMS> findByArea(String area) {
-		
-		return amsRepository.findByArea(area);
-	}
+//		return amsRepository.findByArea(area);
+//	}
 
 }

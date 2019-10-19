@@ -84,7 +84,27 @@ public class AdminController {
 	@GetMapping("/2018")
 	public String year2018(Model theModel) {
 
+		List<AMS> list=amsService.findByYear("2018");
+		
+		theModel.addAttribute("allalumni",list);
+		
+		return "dashboard/alumniList";
+	}
+	
+	@GetMapping("/2019")
+	public String year2019(Model theModel) {
+
 		List<AMS> list=amsService.findByYear("2019");
+		
+		theModel.addAttribute("allalumni",list);
+		
+		return "dashboard/alumniList";
+	}
+	
+	@GetMapping("/2020")
+	public String year2020(Model theModel) {
+
+		List<AMS> list=amsService.findByYear("2020");
 		
 		theModel.addAttribute("allalumni",list);
 		

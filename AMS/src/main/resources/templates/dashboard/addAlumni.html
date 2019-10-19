@@ -33,7 +33,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1"  th:href="@{/admin/doctor-details}">Pujo Direction</a>
+      <a class="navbar-brand mr-1"  th:href="@{/admin/doctor-details}">alumni Direction</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -72,118 +72,34 @@
    
     
      <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/all-pujo}">
+	  <a class="nav-link " th:href="@{/admin/all-alumni}">
           
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>All Pujo</span>
+            <span>All alumni</span>
           </a>
         </li>
-        
-           <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/north-kolkata}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>North Pujo</span>
-          </a>
-        </li>
-        
-            <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/central-kolkata}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Central Pujo</span>
-          </a>
-        </li>
-        
-        
-        
-            <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/south-kolkata}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>South Pujo</span>
-          </a>
-        </li>
+
         
          <li class="nav-item  active">
-	  <a class="nav-link " th:href="@{/admin/add-pujo}">
+	  <a class="nav-link " th:href="@{/admin/add-alumni}">
           
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Add Pujo</span>
+            <span>Add alumni</span>
           </a>
         </li>
         
-        <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/all-restaurant}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>All Restaurant</span>
-          </a>
-        </li>
+  
         
-           <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/north-kolkata-restaurant}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>North Restaurant</span>
-          </a>
-        </li>
-        
-            <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/central-kolkata-restaurant}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Central Restaurant</span>
-          </a>
-        </li>
-        
-        
-        
-            <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/south-kolkata-restaurant}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>South Restaurant</span>
-          </a>
-        </li>
-        <li class="nav-item  ">
-	  <a class="nav-link active" th:href="@{/admin/add-restaurant}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Add Restaurant</span>
-          </a>
-        </li>
-        
-            <li class="nav-item ">
-	  <a class="nav-link " th:href="@{/admin/all-area}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>All Area</span>
-          </a>
-        
-          <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/add-area}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Add Area</span>
-          </a>
-        </li>
-         
+     
               <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/pujo-count-chart}">
+	  <a class="nav-link " th:href="@{/admin/alumni-count-chart}">
           
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Pujo Count</span>
+            <span>alumni Count</span>
           </a>
         </li>
         
-              <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/restaurant-count-chart}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Restaurant Count</span>
-          </a>
-        </li>
+    
       </ul>
 
       <div id="content-wrapper">
@@ -192,8 +108,8 @@
 
 	
 	<div>
-	<form  th:action="@{/admin/add-pujo}"
-						 th:object="${pujo}" method="POST">
+	<form  th:action="@{/admin/add-alumni}"
+						 th:object="${alumni}" method="POST">
 	<table>
 	<tr>
 	
@@ -202,40 +118,70 @@
 	
 <tr>
 	<td><br><dt class="col-sm-3">Name:</dt></td>
-	<td><br><input type="text"  th:field="*{name}"   class="form-control" required="" placeholder="Pujo Name"></td>
+	<td><br><input type="text"  th:field="*{name}"   class="form-control" required="" placeholder="alumni Name"></td>
 	</tr>
 	<input type="hidden"  th:field="*{id}" th:value="*{id}"  class="form-control" required="" >
 		<tr>
-	<td><br><dt class="col-sm-3">Org Name</dt></td>
+	
+	<td><br><dt class="col-sm-3">Year</dt></td>
 	<td><br><input type="text"  th:field="*{org}" class="form-control" required="" placeholder="Organization Name"></td>
 	</tr>
-	<input type="hidden"  th:field="*{count}" th:value="*{count}"  class="form-control" required="" >
+	<input type="hidden"  th:field="*{year}" th:value="*{year}"  class="form-control" required="" >
 	
 		<tr>
-	<td><br><dt class="col-sm-3">Kolkata Division </dt></td>
-	<td><br><input type="text"  th:field="*{division}" class="form-control" required="" placeholder="Kolkata Division"></td>
+	<td><br><dt class="col-sm-3">Course Division </dt></td>
+	<td><br><input type="text"  th:field="*{course}" class="form-control" required="" placeholder="Kolkata Division"></td>
 	</tr>
 			<tr>
-	<td><br><dt class="col-sm-3">Kolkata Area </dt></td>
-	<td><br><input type="text"  th:field="*{area}"  class="form-control" required="" placeholder="Kolkata Area"></td>
-	</tr>
-	
-	<tr>
-	<td><br><dt class="col-sm-3">Location</dt></td>
-	<td><br><input type="text"  th:field="*{location}"  class="form-control" required="" placeholder="Location"></td>
+	<td><br><dt class="col-sm-3">Dept. </dt></td>
+	<td><br><input type="text"  th:field="*{dept}"  class="form-control" required="" placeholder="Kolkata Area"></td>
 	</tr>
 	
 	
 	<tr>
-	<td><br><dt class="col-sm-3">Image-Url</dt></td>
-	<td><br><textarea th:field="*{image}" rows="1" cols="150" name="mess" class="form-control" id="email"  required="" placeholder="Image Url"></textarea><br></td>
+	<td><br><dt class="col-sm-3">Enrollment ID</dt></td>
+	<td><br><textarea th:field="*{enrl}" rows="1" cols="150" name="mess" class="form-control" id="email"  required="" placeholder="Image Url"></textarea><br></td>
 	</tr>
-			<!-- 
+	
+	
+		<tr>
+	<td><br><dt class="col-sm-3">DGPA </dt></td>
+	<td><br><input type="text"  th:field="*{dgpa}" class="form-control" required="" placeholder="Kolkata Division"></td>
+	</tr>
+			<tr>
+	<td><br><dt class="col-sm-3">Email Id</dt></td>
+	<td><br><input type="text"  th:field="*{email}"  class="form-control" required="" placeholder="Kolkata Area"></td>
+	</tr>
+	
 	<tr>
-	<td><br><br><dt class="col-sm-3">Description:</dt></td>
-	<td><br><textarea rows="4" cols="150" name="mess" class="form-control" id="email"  required="" placeholder="Description"></textarea><br></td>
+	<td><br><dt class="col-sm-3">Address</dt></td>
+	<td><br><textarea th:field="*{address}" rows="2" cols="150" name="mess" class="form-control" id="email"  required="" placeholder="Image Url"></textarea><br></td>
 	</tr>
- --><br><br>
+	
+	
+		<tr>
+	<td><br><dt class="col-sm-3">Contact No.</dt></td>
+	<td><br><input type="text"  th:field="*{ph}"  class="form-control" required="" placeholder="Location"></td>
+	</tr>
+	
+	<tr>
+	<td><br><dt class="col-sm-3">Placed</dt></td>
+	<td><br><input type="text"  th:field="*{placed}"  class="form-control" required="" placeholder="Location"></td>
+	</tr>
+	
+		<tr>
+	<td><br><dt class="col-sm-3">Image</dt></td>
+	<td><br><input type="text"  th:field="*{image}"  class="form-control" required="" placeholder="Location"></td>
+	</tr>
+	
+	
+	
+	<tr>
+	<td><br><dt class="col-sm-3">Achivements</dt></td>
+	<td><br><textarea th:field="*{achivements}" rows="10" cols="150" name="mess" class="form-control" id="email"  required="" placeholder="Image Url"></textarea><br></td>
+	</tr>
+	
+<br><br>
 	<tr>
 	<td colspan="2" align="center"><input class="btn btn-primary btn-lg" type="submit" value="Send"></td>
 	

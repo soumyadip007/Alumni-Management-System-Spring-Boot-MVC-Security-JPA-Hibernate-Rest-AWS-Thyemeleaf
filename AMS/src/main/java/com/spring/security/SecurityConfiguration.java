@@ -28,7 +28,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private DataSource securityDataSource;
 	
-	@Autowired
+/*	@Autowired
 	private CustomAuthenticationSuccessHandler successHandler;
 	
 	
@@ -42,7 +42,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		  .authoritiesByUsernameQuery(
 		   "select username, authority from admin where username=?")
 		  .passwordEncoder(passwordEncoder()) ;
-		 } 
+		 } */
 	
 	@Bean
 	public PasswordEncoder passwordEncoder(){
@@ -75,7 +75,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.loginProcessingUrl("/authenticateTheUser")
 			//.defaultSuccessUrl("/register")
 			.permitAll()
-			.successHandler(successHandler)
+		//	.successHandler(successHandler)
 		.and()
 		.logout().permitAll()
 		.and()

@@ -33,7 +33,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="AdminHome.jsp">Pujo Direction</a>
+      <a class="navbar-brand mr-1" href="AdminHome.jsp">AMS Admin</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -71,116 +71,31 @@
   	  
 	
     
-    
-     <li class="nav-item active ">
-	  <a class="nav-link " th:href="@{/admin/all-pujo}">
+     <li class="nav-item active  ">
+	  <a class="nav-link " th:href="@{/admin/all-alumni}">
           
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>All Pujo</span>
+            <span>All alumni</span>
           </a>
         </li>
-        
-           <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/north-kolkata}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>North Pujo</span>
-          </a>
-        </li>
-        
-            <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/central-kolkata}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Central Pujo</span>
-          </a>
-        </li>
-        
-        
-        
-            <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/south-kolkata}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>South Pujo</span>
-          </a>
-        </li>
+
         
          <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/add-pujo}">
+	  <a class="nav-link " th:href="@{/admin/add-alumni}">
           
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Add Pujo</span>
+            <span>Add alumni</span>
           </a>
         </li>
         
-        <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/all-restaurant}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>All Restaurant</span>
-          </a>
-        </li>
+  
         
-           <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/north-kolkata-restaurant}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>North Restaurant</span>
-          </a>
-        </li>
-        
-            <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/central-kolkata-restaurant}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Central Restaurant</span>
-          </a>
-        </li>
-        
-        
-        
-            <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/south-kolkata-restaurant}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>South Restaurant</span>
-          </a>
-        </li>
-        <li class="nav-item  ">
-	  <a class="nav-link active" th:href="@{/admin/add-restaurant}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Add Restaurant</span>
-          </a>
-        </li>
-        
-            <li class="nav-item ">
-	  <a class="nav-link " th:href="@{/admin/all-area}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>All Area</span>
-          </a>
-        
-          <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/add-area}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Add Area</span>
-          </a>
-        </li>
+     
               <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/pujo-count-chart}">
+	  <a class="nav-link " th:href="@{/admin/alumni-count-chart}">
           
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Pujo Count</span>
-          </a> </li>
-          
-              <li class="nav-item  ">
-	  <a class="nav-link " th:href="@{/admin/restaurant-count-chart}">
-          
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Restaurant Count</span>
+            <span>Alumni Count</span>
           </a>
         </li>
       </ul>
@@ -192,9 +107,9 @@
           <!-- Breadcrumbs-->
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-             <a th:href="@{/admin/all-pujo}">Dashboard</a>
+             <a th:href="@{/admin/all-alumni}">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">North/South/Central</li>
+            <li class="breadcrumb-item active">AMS 2019</li>
           </ol>
 
           <!-- Icon Cards-->
@@ -218,18 +133,18 @@
           <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
-             All Pujo </div>
+             All alumni </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
                      	<th>Id</th> 
-                      <th>Pujo Name</th>
-                      <th>Org Name</th>
-                      <th>Division</th>
-                         <th>Area</th>
-                       <th>Count</th>
+                      <th>Name</th>
+                      <th>Enrollment</th>
+                      <th>Year</th>
+                         <th>Course</th>
+                       <th>Dept.</th>
                       <th>Update</th>
                         <th>Delete</th>
                     </tr>
@@ -237,34 +152,34 @@
                   <tfoot>
                     <tr> 		
                     	<th>Id</th> 
-                      <th>Pujo Name</th>
-                      <th>Org Name</th>
-                      <th>Division</th>
-                         <th>Area</th>
-                       <th>Count</th>
+                      <th>Name</th>
+                      <th>Enrollment</th>
+                      <th>Year</th>
+                         <th>Course</th>
+                       <th>Dept.</th>
                       <th>Update</th>
                         <th>Delete</th>
                     </tr>
                   <tbody>
-     	<tr th:each="pujo : ${allpujo}">
+     	<tr th:each="alumni : ${allalumni}">
        	
-  		<td  th:text="${pujo.id}" />	
-				<td   th:text="${pujo.Name}" />	
-				 <td th:text="${pujo.Org}"/>
-				<td   th:text="${pujo.Division}" />	
-					<td  th:text="${pujo.Area}" />	
-				<td th:text="${pujo.Count}" />	
-				<td > <a th:href="@{/admin/update-pujo(id=${pujo.id})}" class="btn btn-success">Update</a></td>
+  		<td  th:text="${alumni.id}" />	
+				<td   th:text="${alumni.name}" />	
+				 <td th:text="${alumni.enrl}"/>
+				<td   th:text="${alumni.year}" />	
+					<td  th:text="${alumni.course}" />	
+				<td th:text="${alumni.dept}" />	
+				<td > <a th:href="@{/admin/update-alumni(id=${alumni.id})}" class="btn btn-success">Update</a></td>
 					
 					
-				<td ><a th:href="@{/admin/delete-pujo(id=${pujo.id})}" class="btn btn-danger">Delete</a></td>
+				<td ><a th:href="@{/admin/delete-alumni(id=${alumni.id})}" class="btn btn-danger">Delete</a></td>
 		</tr>
        
                   </tbody>
                 </table>
               </div>
             </div>
-            <div class="card-footer small text-muted">Pujo-Direction @Admin</div>
+            <div class="card-footer small text-muted">AMS @Admin</div>
           </div>
 
         <!-- /.container-fluid -->
@@ -273,7 +188,7 @@
         <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright ©Soumyadip Pujo-Direction 2019</span>
+              <span>Copyright ©Soumyadip AMS 2019</span>
             </div>
           </div>
         </footer>

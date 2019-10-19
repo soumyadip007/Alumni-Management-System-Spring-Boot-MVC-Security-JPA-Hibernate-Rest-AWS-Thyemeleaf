@@ -84,6 +84,11 @@ public class AMSService implements AMSServiceInterface {
 		return amsRepository.findByCourse(course);
 	}
 
+	@Override
+	public List<AMS> findByEnrl(String course) {
+		
+		return amsRepository.findByEnrl(course);
+	}
 //
 //	@Override
 //	public List<AMS> findByDivision(String div) {

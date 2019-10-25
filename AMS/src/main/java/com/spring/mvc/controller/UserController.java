@@ -7,10 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.spring.entity.AMS;
 import com.spring.service.AMSService;
@@ -38,7 +35,7 @@ public class UserController {
 	@GetMapping("/cv")
 	public String Allalumni(Model theModel) {
 
-		List<AMS> list=amsService.findAll();
+		AMS list=(AMS) amsService.findByEnrl("12017009001027");
 		
 		theModel.addAttribute("allalumni",list);
 		

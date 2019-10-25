@@ -35,10 +35,12 @@ public class UserController {
 	@GetMapping("/cv")
 	public String Allalumni(Model theModel) {
 
-		AMS list= amsService.findByEnrl("12017009001027");
+		AMS list=(AMS) amsService.findByEnrl("12017009001027");
 		
-		theModel.addAttribute("allalumni",list);
+		theModel.addAttribute("list",list);
+	//	theModel.addAttribute("allalumni",list);
 		
+		System.out.println(list);
 		return "user/cv";
 	}
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>CV - Boxed</title>
+	<title>AMS - Alumni Details</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
@@ -73,19 +73,19 @@
 					<div class="intro">
 						<div class="profile-img"><img th:src="${list.image}" alt=""></div>
 						<h2><b> <label th:text="${list.name}"> </b></h2>
-						<h4 class="font-yellow">UEMK</h4>
+						<h4 class="font-yellow">Alumni : <label th:text="${list.year}" />  Batch </h4>
 						<ul class="information margin-tb-30">
 							<li><b>Enrollment ID : </b><label th:text="${list.enrl}"> </li>
 							<li><b>EMAIL : </b><label th:text="${list.email}"> </li>
 							<li><b>Placed at : </b><label th:text="${list.placed}"> </li>
 						</ul>
-						<ul class="social-icons">
+					<!-- 	<ul class="social-icons">
 							<li><a href="../cvdetails/#"><i class="ion-social-pinterest"></i></a></li>
 							<li><a href="../cvdetails/#"><i class="ion-social-linkedin"></i></a></li>
 							<li><a href="../cvdetails/#"><i class="ion-social-instagram"></i></a></li>
 							<li><a href="../cvdetails/#"><i class="ion-social-facebook"></i></a></li>
 							<li><a href="../cvdetails/#"><i class="ion-social-twitter"></i></a></li>
-						</ul>
+						</ul> -->
 					</div><!-- intro -->
 				</div><!-- col-sm-8 -->
 			</div><!-- row -->

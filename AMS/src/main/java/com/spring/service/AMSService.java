@@ -85,7 +85,7 @@ public class AMSService implements AMSServiceInterface {
 	}
 
 	@Override
-	public List<AMS> findByEnrl(String course) {
+	public AMS findByEnrl(String course) {
 		
 		return amsRepository.findByEnrl(course);
 	}

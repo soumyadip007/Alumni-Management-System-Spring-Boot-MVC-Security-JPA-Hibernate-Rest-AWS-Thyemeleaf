@@ -25,7 +25,7 @@ public interface AMSServiceInterface {
 	
 	public List<AMS> findByCourse(String div);
 	
-	public List<AMS> findByEnrl(String div);
+	public AMS findByEnrl(String div);
 	
 
 }

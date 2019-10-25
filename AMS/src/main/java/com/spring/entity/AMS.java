@@ -224,10 +224,12 @@ public class AMS {
 
 	@Override
 	public String toString() {
-		return "AMS [id=" + id + ", year=" + year + ", course=" + course + ", dept=" + dept + ", enrl=" + enrl
-				+ ", dgpa=" + dgpa + ", chapter=" + chapter + ", email=" + email + ", address=" + address + ", ph=" + ph
-				+ ", achivements=" + achivements + ", placed=" + placed + ", image=" + image + ", click=" + click + "]";
+		return "AMS [id=" + id + ", name=" + name + ", year=" + year + ", course=" + course + ", dept=" + dept
+				+ ", enrl=" + enrl + ", dgpa=" + dgpa + ", chapter=" + chapter + ", email=" + email + ", address="
+				+ address + ", ph=" + ph + ", achivements=" + achivements + ", placed=" + placed + ", image=" + image
+				+ ", click=" + click + "]";
 	}
+
 
 	
 

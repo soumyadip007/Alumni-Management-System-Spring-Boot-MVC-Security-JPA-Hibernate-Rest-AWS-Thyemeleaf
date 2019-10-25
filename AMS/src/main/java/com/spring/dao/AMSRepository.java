@@ -23,7 +23,7 @@ public interface AMSRepository extends JpaRepository<AMS, Integer> {
 	
 	List<AMS> findByCourse(String div);
 	
-	List<AMS> findByEnrl(String div);
+	AMS findByEnrl(String div);
 	
 //	List<AMS> findByArea(String area);
 	

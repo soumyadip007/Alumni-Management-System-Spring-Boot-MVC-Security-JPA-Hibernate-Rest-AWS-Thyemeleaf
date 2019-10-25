@@ -34,8 +34,8 @@
 						<div class="info">
 							<i class="icon ion-ios-location-outline"></i>
 							<div class="right-area">
-								<h5>ss</h5>
-								<h5>ss</h5>
+								<h5>UEMK</h5>
+								
 							</div><!-- right-area -->
 						</div><!-- info -->
 					</div><!-- col-sm-4 -->
@@ -44,7 +44,7 @@
 						<div class="info">
 							<i class="icon ion-ios-telephone-outline"></i>
 							<div class="right-area">
-								<h5>337-4139538</h5>
+								<h5><label th:text="${list.phone}"> </h5>
 								
 							</div><!-- right-area -->
 						</div><!-- info -->
@@ -54,7 +54,7 @@
 						<div class="info">
 							<i class="icon ion-ios-chatboxes-outline"></i>
 							<div class="right-area">
-								<h5>contact@colorlib.com</h5>
+								<h5><label th:text="${list.email}"> </h5>
 								<h6>REPLY IN 24 HOURS</h6>
 							</div><!-- right-area -->
 						</div><!-- info -->
@@ -75,9 +75,9 @@
 						<h2><b> <label th:text="${list.name}"> </b></h2>
 						<h4 class="font-yellow">UEMK</h4>
 						<ul class="information margin-tb-30">
-							<li><b>Enrollment ID : </b>August 25, 1987</li>
-							<li><b>EMAIL : </b>mymith@mywebpage.com</li>
-							<li><b>Placed at : </b>mymith@mywebpage.com</li>
+							<li><b>Enrollment ID : </b><label th:text="${list.enrl}"> </li>
+							<li><b>EMAIL : </b><label th:text="${list.email}"> </li>
+							<li><b>Placed at : </b><label th:text="${list.placed}"> </li>
 						</ul>
 						<ul class="social-icons">
 							<li><a href="../cvdetails/#"><i class="ion-social-pinterest"></i></a></li>
@@ -124,36 +124,36 @@
 				<div class="col-sm-8">
 				
 					<div class="experience margin-b-50">
-						<h4><b>Year of Passout : Thymeleaf</b></h4>
+						<h4><b>Year of Passout :<label th:text="${list.year}"> </b></h4>
 						<h5 class="font-yellow"><b></b></h5>
 						
 					</div><!-- experience -->
 					
 					<div class="experience margin-b-50">
-						<h4><b>Enrollment ID : Thymeleaf</b></h4>
+						<h4><b>Enrollment ID : <label th:text="${list.enrl}"> </b></h4>
 						<h5 class="font-yellow"><b>Verified</b></h5>
 						
 					</div><!-- experience -->
 					
 					<div class="experience margin-b-50">
-						<h4><b>Course Details : Thymeleaf</b></h4>
+						<h4><b>Course Details : <label th:text="${list.course}"> </b></h4>
 						<h5 class="font-yellow"><b>Verified</b></h5>
 						
 					</div><!-- experience -->
 					
 					<div class="experience margin-b-50">
-						<h4><b>Department : Thymeleaf</b></h4>
+						<h4><b>Department : <label th:text="${list.dept}"> </b></h4>
 						<h5 class="font-yellow"><b>Verified</b></h5>
 						
 					</div><!-- experience -->
 					
 					<div class="experience margin-b-50">
-						<h4><b>DGPA(Aggegate) : Thymeleaf</b></h4>
+						<h4><b>DGPA(Aggegate) : <label th:text="${list.dgpa}"> </b></h4>
 						<h5 class="font-yellow"><b>Verified</b></h5>
 						
 					</div><!-- experience -->
 					<div class="experience margin-b-50">
-						<h4><b>Chapter : Thymeleaf</b></h4>
+						<h4><b>Chapter : <label th:text="${list.chapter}"> </b></h4>
 						<h5 class="font-yellow"><b>Verified</b></h5>
 						
 					</div>

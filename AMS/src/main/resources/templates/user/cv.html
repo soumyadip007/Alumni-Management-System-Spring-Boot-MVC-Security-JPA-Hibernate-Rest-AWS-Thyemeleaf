@@ -44,7 +44,7 @@
 						<div class="info">
 							<i class="icon ion-ios-telephone-outline"></i>
 							<div class="right-area">
-								<h5><label th:text="${list.phone}"> </h5>
+								<h5><label th:text="${list.ph}"> </h5>
 								
 							</div><!-- right-area -->
 						</div><!-- info -->
@@ -71,7 +71,7 @@
 				<div class="col-md-1 col-lg-2"></div>
 				<div class="col-md-10 col-lg-8">
 					<div class="intro">
-						<div class="profile-img"><img src="../cvdetails/images/profile-1-250x250.jpg" alt=""></div>
+						<div class="profile-img"><img th:src="${list.achivements}" alt=""></div>
 						<h2><b> <label th:text="${list.name}"> </b></h2>
 						<h4 class="font-yellow">UEMK</h4>
 						<ul class="information margin-tb-30">
@@ -193,19 +193,19 @@
 							<h4><b>Address:</b></h4>
 							<h5 class="font-yellow"><b>Present</b></h5>
 							<h6 class="font-lite-black margin-t-10"></h6>
-							<p class="margin-tb-30">Thymeleaf </p>
+							<p class="margin-tb-30"><label th:text="${list.address}">  </p>
 						</div><!-- education -->
 						
 						<div class="education-wrapper">
 						<div class="education margin-b-50">
-							<h4><b>Placed at: Thyemeleaf</b></h4>
+							<h4><b>Placed at: <label th:text="${list.placed}"> </b></h4>
 							<h5 class="font-yellow"><b>Present</b></h5>
 							<h6 class="font-lite-black margin-t-10"></h6>
 						</div><!-- education -->
 						
 						<div class="education-wrapper">
 						<div class="education margin-b-50">
-							<h4><b>Phone : Thyemeleaf</b></h4>
+							<h4><b>Phone : <label th:text="${list.ph}"> </b></h4>
 							<h5 class="font-yellow"><b>Present</b></h5>
 							<h6 class="font-lite-black margin-t-10"></h6>
 						</div><!-- education -->
@@ -213,7 +213,7 @@
 						
 								<div class="education-wrapper">
 						<div class="education margin-b-50">
-							<h4><b>Email : Thyemeleaf</b></h4>
+							<h4><b>Email : <label th:text="${list.email}"></b></h4>
 							<h5 class="font-yellow"><b>Present</b></h5>
 							<h6 class="font-lite-black margin-t-10"></h6>
 						</div><!-- education -->
@@ -226,7 +226,7 @@
 							<h5 class="font-yellow"><b></b></h5>
 							<h6 class="font-lite-black margin-t-10"></h6>
 							
-							<p class="margin-tb-30">Thymeleaf </p>
+							<p class="margin-tb-30"><label th:text="${list.achivements}"> </p>
 						</div><!-- education -->
 					</div><!-- education-wrapper -->
 				</div><!-- col-sm-8 -->

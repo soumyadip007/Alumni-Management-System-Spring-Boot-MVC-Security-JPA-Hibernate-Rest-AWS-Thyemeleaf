@@ -89,8 +89,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	public void configure(WebSecurity web) throws Exception {
 	
-		web.ignoring().antMatchers("/static/**","/resources/**","/login/**","/static/**","/Script/**","/Style/**","/Icon/**",
-				"/js/**","/vendor/**","/bootstrap/**","/Image/**");
+		web.ignoring().antMatchers("/resources/**","/login/**","/static/**","/Script/**","/Style/**","/Icon/**",
+				"/js/**","/vendor/**","/bootstrap/**","/Image/**","/cvdetails/**");
 		
 		//logoutSuccessUrl("/customLogout")
 	}

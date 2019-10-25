@@ -58,6 +58,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 		//	.antMatchers("/admin/**").hasRole("ADMIN")
 			.antMatchers("/admin/**").permitAll()
+			.antMatchers("/user/**").permitAll()
 			.antMatchers(HttpMethod.PUT,	"/pujo/**").permitAll()
 			.antMatchers("/restaurant/**").permitAll()
 			.antMatchers("/area/**").permitAll()
@@ -88,7 +89,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	public void configure(WebSecurity web) throws Exception {
 	
-		web.ignoring().antMatchers("/resources/**","/login/**","/static/**","/Script/**","/Style/**","/Icon/**",
+		web.ignoring().antMatchers("/static/**","/resources/**","/login/**","/static/**","/Script/**","/Style/**","/Icon/**",
 				"/js/**","/vendor/**","/bootstrap/**","/Image/**");
 		
 		//logoutSuccessUrl("/customLogout")

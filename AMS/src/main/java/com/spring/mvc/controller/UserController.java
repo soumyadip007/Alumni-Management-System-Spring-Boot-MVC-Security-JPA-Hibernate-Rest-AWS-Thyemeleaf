@@ -35,14 +35,14 @@ public class UserController {
 
 	
 	
-	@GetMapping("/all-alumni")
+	@GetMapping("/cv")
 	public String Allalumni(Model theModel) {
 
 		List<AMS> list=amsService.findAll();
 		
 		theModel.addAttribute("allalumni",list);
 		
-		return "dashboard/alumniList";
+		return "user/cv";
 	}
 
 

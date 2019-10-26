@@ -191,19 +191,17 @@
 
       <div id="content-wrapper">
 
-
-	<div id="allPujo" style="height: 370px; width: 100%;"></div>
+	
+	<div id="all" style="height: 370px; width: 100%;"></div>
 <br>
-	<div id="northPujo" style="height: 370px; width: 100%;"></div>
+	<div id="2021" style="height: 370px; width: 100%;"></div>
      <br>
-     <div id="southPujo" style="height: 370px; width: 100%;"></div>
+     <div id="2020" style="height: 370px; width: 100%;"></div>
      <br>
-     <div id="centralPujo" style="height: 370px; width: 100%;"></div>
+     <div id="2019" style="height: 370px; width: 100%;"></div>
           <br>
      <div id="chartContainer" style="height: 370px; width: 100%;"></div>
         <br>
-     <div id="pieChart" style="height: 370px; width: 100%;"></div>
-        
         
           
           <!-- Icon Cards-->
@@ -285,7 +283,7 @@
 <script  type="text/javascript"  th:inline="javascript">
 window.onload = function () {
 
-var chart = new CanvasJS.Chart("allPujo", {
+var chart = new CanvasJS.Chart("all", {
 	theme: "light2", // "light2", "dark1", "dark2"
 	animationEnabled: false, // change to true		
 	title:{
@@ -298,8 +296,8 @@ var chart = new CanvasJS.Chart("allPujo", {
 		dataPoints: [
 			/*<![CDATA[*/
 
-		    /*[# th:each="page : ${allpujo}"]*/
-		{ label: /*[[${page.name}]]*/,  y: /*[[${page.count}]]*/  },	
+		    /*[# th:each="page : ${allalumni}"]*/
+		{ label: /*[[${page.name}]]*/,  y: /*[[${page.click}]]*/  },	
 		    /*[/]*/
 
 			/*]]>*/
@@ -310,7 +308,7 @@ var chart = new CanvasJS.Chart("allPujo", {
 });
 
 
-var chart1 = new CanvasJS.Chart("northPujo", {
+var chart1 = new CanvasJS.Chart("2021", {
 	theme: "light2", // "light2", "dark1", "dark2"
 	animationEnabled: false, // change to true		
 	title:{
@@ -323,10 +321,10 @@ var chart1 = new CanvasJS.Chart("northPujo", {
 		dataPoints: [
 			/*<![CDATA[*/
 
-		    /*[# th:each="page : ${allpujo}"]*/
+		    /*[# th:each="page : ${allalumni}"]*/
 		    
-		        /*[# th:if="${page.division} =='North'"]*/
-		{ label: /*[[${page.name}]]*/,  y: /*[[${page.count}]]*/  },	
+		        /*[# th:if="${page.year} =='2021'"]*/
+		{ label: /*[[${page.name}]]*/,  y: /*[[${page.click}]]*/  },	
 			/*[/]*/
 		
 		    /*[/]*/
@@ -340,7 +338,7 @@ var chart1 = new CanvasJS.Chart("northPujo", {
 
 
 
-var chart2 = new CanvasJS.Chart("southPujo", {
+var chart2 = new CanvasJS.Chart("2020", {
 	theme: "light2", // "light2", "dark1", "dark2"
 	animationEnabled: false, // change to true		
 	title:{
@@ -353,10 +351,11 @@ var chart2 = new CanvasJS.Chart("southPujo", {
 		dataPoints: [
 			/*<![CDATA[*/
 
-		    /*[# th:each="page : ${allpujo}"]*/
+		
+		    /*[# th:each="page : ${allalumni}"]*/
 		    
-		        /*[# th:if="${page.division} =='South'"]*/
-		{ label: /*[[${page.name}]]*/,  y: /*[[${page.count}]]*/  },	
+		        /*[# th:if="${page.year} =='2020'"]*/
+		{ label: /*[[${page.name}]]*/,  y: /*[[${page.click}]]*/  },	
 			/*[/]*/
 		
 		    /*[/]*/
@@ -369,11 +368,11 @@ var chart2 = new CanvasJS.Chart("southPujo", {
 });
 
 
-var chart3 = new CanvasJS.Chart("centralPujo", {
+var chart3 = new CanvasJS.Chart("2019", {
 	theme: "light2", // "light2", "dark1", "dark2"
 	animationEnabled: false, // change to true		
 	title:{
-		text: "Central Count Chart"
+		text: "2019 Alumni"
 	},
 	data: [
 	{
@@ -381,11 +380,10 @@ var chart3 = new CanvasJS.Chart("centralPujo", {
 		type: "column",
 		dataPoints: [
 			/*<![CDATA[*/
-
-		    /*[# th:each="page : ${allpujo}"]*/
+   /*[# th:each="page : ${allalumni}"]*/
 		    
-		        /*[# th:if="${page.division} =='Central'"]*/
-		{ label: /*[[${page.name}]]*/,  y: /*[[${page.count}]]*/  },	
+		        /*[# th:if="${page.year} =='2019'"]*/
+		{ label: /*[[${page.name}]]*/,  y: /*[[${page.click}]]*/  },	
 			/*[/]*/
 		
 		    /*[/]*/
@@ -412,9 +410,9 @@ var chart4 = new CanvasJS.Chart("chartContainer", {
 		dataPoints: [
 				/*<![CDATA[*/
 
-			    /*[# th:each="page : ${allpujo}"]*/
+			    /*[# th:each="page : ${allalumni}"]*/
 		
-			{ y: /*[[${page.count}]]*/ , indexLabel: /*[[${page.name}]]*/ },
+			{ y: /*[[${page.click}]]*/ , indexLabel: /*[[${page.name}]]*/ },
 		    /*[/]*/
 
 			/*]]>*/

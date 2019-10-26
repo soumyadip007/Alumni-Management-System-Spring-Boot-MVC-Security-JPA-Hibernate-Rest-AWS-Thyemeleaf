@@ -46,7 +46,7 @@ public class UserController {
 
 
 
-	@GetMapping("/")
+	@GetMapping("/index")
 	public String all(Model theModel) {
 
 		List<AMS> list=amsService.findAll();

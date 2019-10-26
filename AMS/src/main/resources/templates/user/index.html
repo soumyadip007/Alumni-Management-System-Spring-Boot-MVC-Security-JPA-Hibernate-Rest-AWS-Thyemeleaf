@@ -175,7 +175,7 @@
         <div class="row">
          
 
-		 <div class="col-md-6 col-lg-4 col-xl-3"  th:each="alumni : ${allalumni}" th:if="${alumni.year == '2021'}">
+		 <div class="col-md-6 col-lg-4 col-xl-3"  th:each="alumni : ${allalumni}" th:if="${alumni.year == '2019'}">
             <div class="card text-center card-product">
               <div class="card-product__img">
                 <img class="card-img" src="../ams/img/product/product1.png" alt="">
@@ -186,9 +186,9 @@
                 </ul>
               </div>
               <div class="card-body">
-                <p>Accessories</p>
+                <p><label th:text="${alumni.year}"></p>
                 <h4 class="card-product__title"><a href="single-product.html"><label th:text="${alumni.name}"> </a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p class="card-product__price"><label th:text="${alumni.email}"></p>
               </div>
             </div>
           </div>
@@ -210,8 +210,7 @@
         </div>
         <div class="row">
          
-
-		 <div class="col-md-6 col-lg-4 col-xl-3">
+ <div class="col-md-6 col-lg-4 col-xl-3"  th:each="alumni : ${allalumni}" th:if="${alumni.year == '2020'}">
             <div class="card text-center card-product">
               <div class="card-product__img">
                 <img class="card-img" src="../ams/img/product/product1.png" alt="">
@@ -222,12 +221,14 @@
                 </ul>
               </div>
               <div class="card-body">
-                <p>Accessories</p>
-                <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p><label th:text="${alumni.year}"></p>
+                <h4 class="card-product__title"><a href="single-product.html"><label th:text="${alumni.name}"> </a></h4>
+                <p class="card-product__price"><label th:text="${alumni.email}"></p>
               </div>
             </div>
           </div>
+          
+          
           
         </div>
 		
@@ -244,10 +245,10 @@
         <div class="row">
          
 
-		 <div class="col-md-6 col-lg-4 col-xl-3">
+		 <div class="col-md-6 col-lg-4 col-xl-3"  th:each="alumni : ${allalumni}" th:if="${alumni.year == '2021'}">
             <div class="card text-center card-product">
               <div class="card-product__img">
-                <img class="card-img" src="../ams/img/product/product1.png" alt="">
+                <img class="card-img" th:src="${alumni.image}"  alt="">
            <ul class="card-product__imgOverlay">
                   <li><button><i></i></button></li>
                   <li><button><i ></i></button></li>
@@ -255,41 +256,20 @@
                 </ul>
               </div>
               <div class="card-body">
-                <p>Accessories</p>
-                <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p><label th:text="${alumni.year}"></p>
+                <h4 class="card-product__title"><a href="single-product.html"><label th:text="${alumni.name}"> </a></h4>
+                <p class="card-product__price"><label th:text="${alumni.email}"></p>
               </div>
             </div>
           </div>
           
-        </div>
-		
+          
 		
 		
 
       </div>
     </section>
-    <!-- ================ trending product section end ================= -->  
-
-
-    <!-- ================ offer section start ================= 
-    <section class="offer" id="parallax-1" data-anchor-target="#parallax-1" data-300-top="background-position: 20px 30px" data-top-bottom="background-position: 0 20px">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-5">
-            <div class="offer__content text-center">
-              <h3>Up To 50% Off</h3>
-              <h4>Winter Sale</h4>
-              <p>Him she'd let them sixth saw light</p>
-              <a class="button button--active mt-3 mt-xl-4" href="#">Shop Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ================ offer section end ================= --> 
-
-    <!-- ================ Best Selling item  carousel ================= --> 
+   
     <section class="section-margin calc-60px">
       <div class="container">
         <div class="section-intro pb-60px">
@@ -299,9 +279,9 @@
         <div class="owl-carousel owl-theme" id="bestSellerCarousel">
         
 
-		<div class="card text-center card-product">
+		<div class="card text-center card-product"  th:each="alumni : ${allalumni}">
             <div class="card-product__img">
-              <img class="img-fluid" src="../ams/img/product/product1.png" alt="">
+              <img class="img-fluid" th:src="${alumni.image}" alt="">
               <ul class="card-product__imgOverlay">
                 <li><button><i class="ti-search"></i></button></li>
                 <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -309,9 +289,9 @@
               </ul>
             </div>
             <div class="card-body">
-              <p>Accessories</p>
-              <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
-              <p class="card-product__price">$150.00</p>
+              <p><label th:text="${alumni.year}"/></p>
+              <h4 class="card-product__title"><a href="single-product.html"><label th:text="${alumni.name}"/></a></h4>
+              <p class="card-product__price"><label th:text="${alumni.email}"/></p>
             </div>
           </div>
 
@@ -422,13 +402,11 @@
 				<div class="row section_gap">
 					<div class="col-lg-3 col-md-6 col-sm-6">
 						<div class="single-footer-widget tp_widgets">
-							<h4 class="footer_title large_title">Our Mission</h4>
+							<h4 class="footer_title large_title">AMS</h4>
 							<p>
-								So seed seed green that winged cattle in. Gathering thing made fly you're no 
-								divided deep moved us lan Gathering thing us land years living.
-							</p>
+								</p>
 							<p>
-								So seed seed green that winged cattle in. Gathering thing made fly you're no divided deep moved 
+								2019, 2020, 2021
 							</p>
 						</div>
 					</div>
@@ -436,12 +414,7 @@
 						<div class="single-footer-widget tp_widgets">
 							<h4 class="footer_title">Quick Links</h4>
 							<ul class="list">
-								<li><a href="#">Home</a></li>
-								<li><a href="#">Shop</a></li>
-								<li><a href="#">Blog</a></li>
-								<li><a href="#">Product</a></li>
-								<li><a href="#">Brand</a></li>
-								<li><a href="#">Contact</a></li>
+								<li><a href="#">Admin Login</a></li>
 							</ul>
 						</div>
 					</div>
@@ -449,12 +422,7 @@
 						<div class="single-footer-widget instafeed">
 							<h4 class="footer_title">Gallery</h4>
 							<ul class="list instafeed d-flex flex-wrap">
-								<li><img src="../ams/img/gallery/r1.jpg" alt=""></li>
-								<li><img src="../ams/img/gallery/r2.jpg" alt=""></li>
-								<li><img src="../ams/img/gallery/r3.jpg" alt=""></li>
-								<li><img src="../ams/img/gallery/r5.jpg" alt=""></li>
-								<li><img src="../ams/img/gallery/r7.jpg" alt=""></li>
-								<li><img src="../ams/img/gallery/r8.jpg" alt=""></li>
+						
 							</ul>
 						</div>
 					</div>

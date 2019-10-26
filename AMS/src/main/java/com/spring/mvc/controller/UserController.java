@@ -18,7 +18,7 @@ import com.spring.service.AMSService;
  *
  */
 @Controller
-@RequestMapping("/ams")
+@RequestMapping("/user")
 public class UserController {
 	
 
@@ -46,14 +46,14 @@ public class UserController {
 
 
 
-	@GetMapping("/index")
+	@GetMapping("/al")
 	public String all(Model theModel) {
 
-		List<AMS> list=amsService.findAll();
+//		List<AMS> list=amsService.findAll();
+//		
+//		theModel.addAttribute("allalumni",list);
 		
-		theModel.addAttribute("allalumni",list);
-		
-		return "dashboard/index.html";
+		return "dashboard/landing.html";
 	}
 	
 	@GetMapping("/2019")

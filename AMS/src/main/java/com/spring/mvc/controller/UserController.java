@@ -46,46 +46,17 @@ public class UserController {
 
 
 
-	@GetMapping("/al")
+	@GetMapping("/index")
 	public String all(Model theModel) {
 
-//		List<AMS> list=amsService.findAll();
-//		
-//		theModel.addAttribute("allalumni",list);
-		
-		return "user/landing";
-	}
-	
-	@GetMapping("/2019")
-	public String year2019(Model theModel) {
-
-		List<AMS> list=amsService.findByYear("2019");
+		List<AMS> list=amsService.findAll();
 		
 		theModel.addAttribute("allalumni",list);
 		
-		return "dashboard/2019";
-	}
-	
-	@GetMapping("/2020")
-	public String year2020(Model theModel) {
-
-		List<AMS> list=amsService.findByYear("2020");
-		
-		theModel.addAttribute("allalumni",list);
-		
-		return "dashboard/2020";
+		return "user/index";
 	}
 	
 	
-	@GetMapping("/2021")
-	public String year2018(Model theModel) {
-
-		List<AMS> list=amsService.findByYear("2021");
-		
-		theModel.addAttribute("allalumni",list);
-		
-		return "dashboard/2021";
-	}
 	
 
 //	@GetMapping("/id")

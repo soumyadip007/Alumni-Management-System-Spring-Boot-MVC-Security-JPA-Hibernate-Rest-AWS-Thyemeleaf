@@ -175,7 +175,7 @@
         <div class="row">
          
 
-		 <div class="col-md-6 col-lg-4 col-xl-3">
+		 <div class="col-md-6 col-lg-4 col-xl-3"  th:each="alumni : ${allalumni}" th:if="${alumni.year == '2021'}">
             <div class="card text-center card-product">
               <div class="card-product__img">
                 <img class="card-img" src="../ams/img/product/product1.png" alt="">
@@ -187,11 +187,14 @@
               </div>
               <div class="card-body">
                 <p>Accessories</p>
-                <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
+                <h4 class="card-product__title"><a href="single-product.html"><label th:text="${alumni.name}"> </a></h4>
                 <p class="card-product__price">$150.00</p>
               </div>
             </div>
           </div>
+          
+          
+          
           
         </div>
 		

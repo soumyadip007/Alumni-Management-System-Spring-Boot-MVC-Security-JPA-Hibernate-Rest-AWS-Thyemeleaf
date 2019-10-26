@@ -113,6 +113,46 @@ public class AdminController {
 		
 		return "dashboard/2021";
 	}
+	
+	
+	
+
+	@GetMapping("/alumni-count-chart")
+	public String Chart(Model theModel) {
+	
+		List<AMS> list=amsService.findAll();
+		 
+		theModel.addAttribute("allalumni",list);
+		
+//		int a=0;
+//		int b=0;
+//		int c=0;
+//		
+//		for(AMS obj:list)
+//		{
+//			if(obj.getDivision().equals("North"))
+//			{
+//				a+=obj.getCount();
+//			}
+//			else if(obj.getDivision().equals("South"))
+//			{
+//				b+=obj.getCount();
+//			}
+//			else if(obj.getDivision().equals("Central"))
+//			{
+//				c+=obj.getCount();
+//			}
+//			
+//		}
+//		theModel.addAttribute("a",a);
+//		
+//		theModel.addAttribute("b",b);
+//		
+//		theModel.addAttribute("c",c);
+//		
+//		System.out.println("a="+a+"b="+b+"c="+c);
+		return "dashboard/chart";
+	}
 }
 
 

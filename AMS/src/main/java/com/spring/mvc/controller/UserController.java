@@ -53,7 +53,7 @@ public class UserController {
 //		
 //		theModel.addAttribute("allalumni",list);
 		
-		return "dashboard/landing.html";
+		return "dashboard/landing";
 	}
 	
 	@GetMapping("/2019")

@@ -38,8 +38,17 @@ public class UserController {
 
 		AMS list=(AMS) amsService.findById(theId);
 		
+		int click=list.getClick();
+		
+		click++;
+		
+		list.setClick(click);
+		
+
+		amsService.save(list);
+	
+		
 		theModel.addAttribute("list",list);
-	//	theModel.addAttribute("allalumni",list);
 		
 		System.out.println(list);
 		return "user/alumni-details";

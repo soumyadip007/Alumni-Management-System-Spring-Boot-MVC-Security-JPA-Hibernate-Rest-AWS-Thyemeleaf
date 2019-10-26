@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.spring.entity.AMS;
 import com.spring.service.AMSService;
@@ -33,9 +34,9 @@ public class UserController {
 	
 	
 	@GetMapping("/alumni")
-	public String Allalumni(Model theModel) {
+	public String Allalumni(@RequestParam("id") int theId,Model theModel) {
 
-		AMS list=(AMS) amsService.findByEnrl("12017009001027");
+		AMS list=(AMS) amsService.findById(theId);
 		
 		theModel.addAttribute("list",list);
 	//	theModel.addAttribute("allalumni",list);

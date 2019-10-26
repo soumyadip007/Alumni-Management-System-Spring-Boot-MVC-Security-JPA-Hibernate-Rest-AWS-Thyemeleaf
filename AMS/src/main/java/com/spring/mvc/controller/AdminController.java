@@ -124,33 +124,33 @@ public class AdminController {
 		 
 		theModel.addAttribute("allalumni",list);
 		
-//		int a=0;
-//		int b=0;
-//		int c=0;
-//		
-//		for(AMS obj:list)
-//		{
-//			if(obj.getDivision().equals("North"))
-//			{
-//				a+=obj.getCount();
-//			}
-//			else if(obj.getDivision().equals("South"))
-//			{
-//				b+=obj.getCount();
-//			}
-//			else if(obj.getDivision().equals("Central"))
-//			{
-//				c+=obj.getCount();
-//			}
-//			
-//		}
-//		theModel.addAttribute("a",a);
-//		
-//		theModel.addAttribute("b",b);
-//		
-//		theModel.addAttribute("c",c);
-//		
-//		System.out.println("a="+a+"b="+b+"c="+c);
+		int a=0;
+		int b=0;
+		int c=0;
+		
+		for(AMS obj:list)
+		{
+			if(obj.getYear().equals("2019"))
+			{
+				a+=obj.getClick();
+			}
+			else if(obj.getYear().equals("2020"))
+			{
+				b+=obj.getClick();
+			}
+			else if(obj.getYear().equals("2021"))
+			{
+				c+=obj.getClick();
+			}
+			
+		}
+		theModel.addAttribute("a",a);
+		
+		theModel.addAttribute("b",b);
+		
+		theModel.addAttribute("c",c);
+		
+		System.out.println("a="+a+"b="+b+"c="+c);
 		return "dashboard/chart";
 	}
 }

@@ -187,7 +187,7 @@
               </div>
               <div class="card-body">
                 <p><label th:text="${alumni.year}"></p>
-                <h4 class="card-product__title"><a href="single-product.html"><label th:text="${alumni.name}"> </a></h4>
+                <h4 class="card-product__title"><a th:href="@{/user/alumni(id=${alumni.id})}"><label th:text="${alumni.name}"> </a></h4>
                 <p class="card-product__price"><label th:text="${alumni.email}"></p>
               </div>
             </div>
@@ -222,7 +222,7 @@
               </div>
               <div class="card-body">
                 <p><label th:text="${alumni.year}"></p>
-                <h4 class="card-product__title"><a href="single-product.html"><label th:text="${alumni.name}"> </a></h4>
+                <h4 class="card-product__title"><a th:href="@{/user/alumni(id=${alumni.id})}"><label th:text="${alumni.name}"> </a></h4>
                 <p class="card-product__price"><label th:text="${alumni.email}"></p>
               </div>
             </div>
@@ -290,7 +290,7 @@
             </div>
             <div class="card-body">
               <p><label th:text="${alumni.year}"/></p>
-              <h4 class="card-product__title"><a href="single-product.html"><label th:text="${alumni.name}"/></a></h4>
+              <h4 class="card-product__title"><a th:href="@{/user/alumni(id=${alumni.id})}"><label th:text="${alumni.name}"/></a></h4>
               <p class="card-product__price"><label th:text="${alumni.email}"/></p>
             </div>
           </div>

@@ -28,7 +28,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private DataSource securityDataSource;
 	
-/*	@Autowired
+	@Autowired
 	private CustomAuthenticationSuccessHandler successHandler;
 	
 	
@@ -42,7 +42,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		  .authoritiesByUsernameQuery(
 		   "select username, authority from admin where username=?")
 		  .passwordEncoder(passwordEncoder()) ;
-		 } */
+		 } 
 	
 	@Bean
 	public PasswordEncoder passwordEncoder(){
@@ -57,7 +57,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 		http.authorizeRequests()
 		//	.antMatchers("/admin/**").hasRole("ADMIN")
-			.antMatchers("/admin/**").permitAll()
+			.antMatchers("/admin/**").hasRole("ADMIN")
 			.antMatchers("/user/**").permitAll()
 			.antMatchers("/restaurant/**").permitAll()
 			.antMatchers("/area/**").permitAll()
